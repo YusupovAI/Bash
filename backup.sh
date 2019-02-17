@@ -1,6 +1,7 @@
 #!/bin/bash
 
 exec 2>/dev/null
+IFS=$'\n'
 count=2
 dirname=$1
 archive=$2
@@ -8,7 +9,7 @@ current=$(pwd)
 
 cd $HOME 
 mkdir $dirname
-IFS=$'\n'
+search=$(find $HOME/$dirname/$fullname)
 function addFiles {
 	format=$1
 	res=$(find $HOME -type f -name *.$format)
