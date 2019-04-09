@@ -15,3 +15,4 @@ make
 make install
 cd ..
 rm -rf bin-arm build lib-arm
+tar-cf bin-final src.tar
